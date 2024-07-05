@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+
 import Home from './components/home/Home';
 import ListaCategoria from './components/categorias/ListaCategoria';
 import FormularioCategoria from './components/categorias/FormularioCategoria';
@@ -19,8 +20,9 @@ function App() {
           <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/categorias" element={<ListaCategoria  />} />
-          <Route path="/editarcategorias/:id" element={<FormularioCategoria />} />
-          <Route path="/deletarcategorias/:id" element={<DeletarCategoria />} />
+          <Route path="/cadastroCategorias/" element={<FormularioCategoria />} />
+          <Route path="/editarcategorias/" element={<FormularioCategoria />} />
+          <Route path="/deletarcategorias/" element={<DeletarCategoria />} />
 
           </Routes>
           </div>

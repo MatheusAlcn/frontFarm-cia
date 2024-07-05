@@ -14,16 +14,14 @@ function ListaCategoria() {
         await buscar('/categorias', setCategoria);
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          // toastAlerta('O token expirou, favor logar novamente', 'info')
-          navigate('/login'); // Redirecionar para login se o token expirar
+          navigate('/login'); 
         }
       }
     }
   
     useEffect(() => {
       buscarCategoria();
-    }, []); // A dependência [categorias.length] foi alterada para [] para evitar chamadas infinitas
-  
+    }, []); 
     return (
       <>
         {categorias.length === 0 && (
